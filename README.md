@@ -21,6 +21,14 @@ A Java Spring Boot starter library for connecting to the OpenAI API. Provides au
 
 ### 1. Add the dependency
 
+**Gradle (build.gradle):**
+
+```groovy
+implementation 'com.aiapiclient:ai-api-client:1.0.0-SNAPSHOT'
+```
+
+**Maven (pom.xml):**
+
 ```xml
 <dependency>
     <groupId>com.aiapiclient</groupId>
@@ -199,13 +207,13 @@ src/main/java/com/aiapiclient/
 ## Building
 
 ```bash
-mvn clean compile
+./gradlew clean build
 ```
 
 ## Running Tests
 
 ```bash
-mvn test
+./gradlew test
 ```
 
 ## License
