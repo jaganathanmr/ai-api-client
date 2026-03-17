@@ -15,9 +15,10 @@ class OpenAiAutoConfigurationTest {
             .withConfiguration(AutoConfigurations.of(OpenAiAutoConfiguration.class));
 
     @Test
-    void shouldNotCreateBeansWhenApiKeyIsMissing() {
+    void shouldNotCreateOpenAiClientWhenApiKeyIsMissing() {
         contextRunner.run(context -> {
-            assertFalse(context.containsBean("openAiClient"));
+            assertFalse(context.containsBeanDefinition("openAiClient"));
+            assertFalse(context.containsBeanDefinition("openAiRestClient"));
         });
     }
 
